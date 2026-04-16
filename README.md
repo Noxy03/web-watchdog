@@ -10,6 +10,23 @@ A lightweight Python script to monitor website changes and receive detailed "dif
 ## 🛠 Installation (Android/Termux)
 Follow these steps to turn your old phone into a monitoring server:
 
+### Info
+Device File Structure
+```
+/data/data/com.termux/files/home  (Short: ~)
+│
+├── monitor.py                <-- Python-Script
+├── urls.txt                  <-- List of URLs
+├── watchdog.log              <-- Error Messages (created by nohup)
+├── log.txt                   <-- Boot-Log (created by Boot-Script)
+│
+├── .termux/                  <-- Hidden Configuration Folder
+│   └── boot/                 <-- Folder for Autostart-Scripts
+│       └── start-watchdog.sh <-- Autostart Script
+│
+└── .bashrc                   <-- Loads with every Terminal-Start (like sshd)
+```
+
 ### 1. Setup Environment
 ```bash
 pkg update && pkg upgrade
